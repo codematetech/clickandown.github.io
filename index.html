@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Website</title>
+    <style>
+        #cookieConsent {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            color: #666;
+            z-index: 1000;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        #cookieConsent button {
+            background-color: #2580c3;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        
+        #cookieConsent button:hover {
+            opacity:1;
+        }
+        </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CLICK AND OWN</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Our Products</h2>
+            <article class="products">
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirts</h3>
+                    <p>$15</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_05.webp" alt="Product 1">
+                    <h3>Jacket</h3>
+                    <p>$14</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirt</h3>
+                    <p>$10</p>
+                    <button>Buy Now</button>
+                </div>
+            </article>
+            <article class="products">
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirts</h3>
+                    <p>$15</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_05.webp" alt="Product 1">
+                    <h3>Jacket</h3>
+                    <p>$14</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirt</h3>
+                    <p>$10</p>
+                    <button>Buy Now</button>
+                </div>
+            </article>
+            <article class="products">
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirts</h3>
+                    <p>$15</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_05.webp" alt="Product 1">
+                    <h3>Jacket</h3>
+                    <p>$14</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirt</h3>
+                    <p>$10</p>
+                    <button>Buy Now</button>
+                </div>
+            </article>
+            <article class="products">
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirts</h3>
+                    <p>$15</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_05.webp" alt="Product 1">
+                    <h3>Jacket</h3>
+                    <p>$14</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assest/HP_Web_Categories_02.webp" alt="Product 1">
+                    <h3>Shirt</h3>
+                    <p>$10</p>
+                    <button>Buy Now</button>
+                </div>
+            </article>
+        </section>
+        <div id="cookieConsent">
+            <p>This website uses cookies to ensure you get the best experience on our website. <a href="https://privacypolicies.com" target="_blank">Learn More</a></p>
+            <button onclick="acceptCookie()">Accept</button>
+           </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 CLICK AND OWN Website. All rights reserved.</p>
+    </footer>
+    <script>
+        function acceptCookie() {
+            var x = document.getElementById("cookieConsent");
+            x.style.display = "none";
+            localStorage.setItem('cookieAccepted', 'true');
+        }
+        
+        if(localStorage.getItem('cookieAccepted') !== 'true') {
+            document.getElementById("cookieConsent").style.display = "block";
+        }
+        </script>
+        
+    <script src="scripts.js"></script>
+</body>
+</html>
